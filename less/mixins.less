@@ -1,1 +1,12 @@
 // Mixins in here
+.fun-button(@color: @button-bg, @width: 80%, @text-size: 1.7rem) {
+  background: @color;
+  width: @width;
+  font-size: @text-size;
+  color: white;
+
+  &:hover {
+    background: white;
+    color: @color;
+  }
+}
