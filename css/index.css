@@ -344,11 +344,18 @@ header img {
   animation-duration: 3s;
 }
 .home .content-destination {
-  width: 98%;
-  margin: 0 1% 30px;
+  width: 75%;
+  margin: 0 auto;
+}
+@media (max-width: 500px ) {
+  .home .content-destination {
+    width: 98%;
+    margin: 0 1% 30px;
+  }
 }
 .home .content-destination img {
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 .home .content-pick {
   padding-top: 30px;

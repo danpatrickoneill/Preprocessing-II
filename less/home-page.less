@@ -115,10 +115,16 @@ header {
   }
 
   .content-destination {
-    .mobile-content();
+    width: 75%;
+    margin: 0 auto;
+
+    @media @mobile {
+      .mobile-content();
+    }
 
     img {
       border-radius: 10px;
+      margin-bottom: 20px;
     }
   }
 

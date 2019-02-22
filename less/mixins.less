@@ -21,8 +21,8 @@
   margin: 0 1% 30px;
 }
 
-.back-and-forth-animation(@direction) {
-  0% {background-color:transparent; @direction:0px; top:0px;}
-  50% {background-color:transparent; @direction:53%; top:0px;}
-  100% {background-color:transparent; @direction:0px; top:0px;}
+.back-and-forth(@distance) {
+  0% {background-color:transparent; right:0px; top:0px;}
+  50% {background-color:transparent; right:@distance; top:0px;}
+  100% {background-color:transparent; right:0px; top:0px;}
 }
