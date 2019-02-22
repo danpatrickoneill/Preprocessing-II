@@ -1,3 +1,15 @@
+@keyframes img-effect-left {
+  0% {background-color:transparent; right:0px; top:0px;}
+  50% {background-color:transparent; right:53%; top:0px;}
+  100% {background-color:transparent; right:0px; top:0px;}
+}
+
+@keyframes img-effect-right {
+  0% {background-color:transparent; left:0px; top:0px;}
+  50% {background-color:transparent; left:53%; top:0px;}
+  100% {background-color:transparent; left:0px; top:0px;}
+}
+
 
 header {
   max-width: 800px;
@@ -14,13 +26,13 @@ header {
     margin-bottom: 20px;
 
     @media @mobile {
-      width: 95%;
+      width: 98%;
+      margin: 0 1% 20px;
     }
   }
 }
 
 .home {
-
   .content-section {
     margin: 30px 0;
     display: flex;
@@ -31,31 +43,42 @@ header {
       .flex-column();
       .mobile-content();
     }
-    
+
     .text-content {
       width: 48%;
       padding-right: 1%;
 
       @media @mobile {
-      .mobile-content();
-      padding: 0;
+        .mobile-content();
+        padding: 0;
       }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+       
       @media @mobile {
-      .mobile-content();
-      margin-bottom: 10px;
+        .mobile-content();
+        margin-bottom: 10px;
+        animation-name: none;
       }
 
       img {
         border-radius: 10px;
       }
     }
+
+    .img-right {
+      &:hover {
+        position: relative;
+        animation-name: img-effect-left;
+        animation-duration: 3s;
+      }
+    }
   }
+
+    
 
   .inverse-content {
     padding-bottom: 30px;
@@ -66,7 +89,7 @@ header {
       padding-right: 0;
 
       @media @mobile {
-      .mobile-content();
+        .mobile-content();
       }
     }
 
@@ -75,11 +98,20 @@ header {
       padding-left: 0;
 
       @media @mobile {
-      order: 1;
-      .mobile-content();
-      margin-bottom: 10px;
+        order: 1;
+        .mobile-content();
+        margin-bottom: 10px;
       }
     }
+    
+    .img-left {
+      &:hover {
+        position: relative;
+        animation-name: img-effect-right;
+        animation-duration: 3s;
+      }
+    }
+    
   }
 
   .content-destination {
@@ -108,17 +140,16 @@ header {
       @media @mobile {
         width: 72%;
       }
-    
-    button {
-      .fun-button();
-      padding: 10px 0;
-      border-radius: 10px;
 
-      @media @mobile {
-        width: 100%;
+      button {
+        .fun-button();
+        padding: 10px 0;
+        border-radius: 15px;
+
+        @media @mobile {
+          width: 100%;
+        }
       }
-      
-    }
     }
   }
-}// home
+} // home

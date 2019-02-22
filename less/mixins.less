@@ -18,5 +18,11 @@
 
 .mobile-content() {
   width: 98%;
-  margin: 0 auto 30px;
+  margin: 0 1% 30px;
+}
+
+.back-and-forth-animation(@direction) {
+  0% {background-color:transparent; @direction:0px; top:0px;}
+  50% {background-color:transparent; @direction:53%; top:0px;}
+  100% {background-color:transparent; @direction:0px; top:0px;}
 }
